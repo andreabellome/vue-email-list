@@ -3,11 +3,11 @@ createApp({
     data() {
       return {
         /* variables Vue 3 */
-        email: ''
+        email: []
       }
     },
-    created(){
-        
+    mounted(){
+        this.attivaApi()
     },
     methods: {
         /* functions Vue 3 */
@@ -15,7 +15,7 @@ createApp({
 
             for (let i = 0; i < 10; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then( res => {
-                    this.email = res.data.response
+                    this.email.push(res.data.response)
                 } )
             }
             

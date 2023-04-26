@@ -30,7 +30,13 @@
         <!-- start: app container -->
         <div id="app">
 
-            
+            <ul class="user-list-spec">
+
+                <li v-for="(element,index) in email" :key="index" >
+                    {{ element }}
+                </li>
+
+            </ul>
             
 
         </div>
